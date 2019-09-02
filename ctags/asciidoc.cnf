@@ -1,0 +1,12 @@
+--langdef=asciidoc
+--langmap=asciidoc:.asc.adoc.asciidoc
+--regex-asciidoc=/^\/\///c,comment,comment/
+--regex-asciidoc=/^= +(.*)/\1/s,title,document title/
+--regex-asciidoc=/^={2} +(.*)/· \1/s,section,level 1 section/
+--regex-asciidoc=/^={3} +(.*)/· · \1/s,section,level 2 section/
+--regex-asciidoc=/^={4} +(.*)/· · · \1/s,section,level 3 section/
+--regex-asciidoc=/^={5} +(.*)/· · · · \1/s,section,level 4 section/
+--regex-asciidoc=/^={6} +(.*)/· · · · · \1/s,section,level 5 section/
+--regex-asciidoc=/\binclude::([^\[]+)/\1/i,include,included file/
+--regex-asciidoc=/\bimage::?([^\[]+)/\1/I,image,image/
+--regex-asciidoc=/\bvideo::([^\[]+)/\1/v,video,video/
