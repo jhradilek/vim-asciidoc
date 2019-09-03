@@ -7,6 +7,7 @@
 --regex-asciidoc=/^={4} +(.*)/· · · \1/s,section,level 3 section/
 --regex-asciidoc=/^={5} +(.*)/· · · · \1/s,section,level 4 section/
 --regex-asciidoc=/^={6} +(.*)/· · · · · \1/s,section,level 5 section/
---regex-asciidoc=/\binclude::([^\[]+)/\1/i,include,included file/
---regex-asciidoc=/\bimage::?([^\[]+)/\1/I,image,image/
---regex-asciidoc=/\bvideo::([^\[]+)/\1/v,video,video/
+--regex-asciidoc=/^include::([^\[]+)/\1/i,include,included file/
+--regex-asciidoc=/^video::([^\[]+)/\1/v,video,video/
+--regex-asciidoc=/^image::?([^\[]+)/\1/I,image,image/
+--regex-asciidoc=/^([ \t]|[^\/]{2}.*)\bimage:([^\[]+)/\2/I,image,image/
