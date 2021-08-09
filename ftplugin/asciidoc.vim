@@ -24,7 +24,8 @@ let g:tagbar_type_asciidoc = {
     \ 'i:Included Files',
     \ 'I:Images',
     \ 'v:Videos',
-    \ 'a:Set Attributes'
+    \ 'a:Set Attributes',
+    \ 'A:Unset Attributes'
   \ ]
 \}
 

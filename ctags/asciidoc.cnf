@@ -13,3 +13,7 @@
 --regex-asciidoc=/^([ \t]|[^\/]{2}.*)\bimage:([^\[]+)/\2/I,image,image/
 --regex-asciidoc=/^:([^!:]+):/\1/a,set,set attribute/
 --regex-asciidoc=/^ifn?def::[^\[]+\[:([^!:]+):/\1/a,set,set attribute/
+--regex-asciidoc=/^:!([^!:]+):/\1/A,unset,unset attribute/
+--regex-asciidoc=/^ifn?def::[^\[]+\[:!([^!:]+):/\1/A,unset,unset attribute/
+--regex-asciidoc=/^:([^!:]+)!:/\1/A,unset,unset attribute/
+--regex-asciidoc=/^ifn?def::[^\[]+\[:([^!:]+)!:/\1/A,unset,unset attribute/
