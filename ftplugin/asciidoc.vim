@@ -2,7 +2,7 @@
 " Language:    AsciiDoc
 " Maintainer:  Jaromir Hradilek <jhradilek@gmail.com>
 " URL:         https://github.com/jhradilek/vim-asciidoc
-" Last Change: 3 September 2019
+" Last Change: 9 August 2020
 " Description: A filetype plugin file for the AsciiDoc markup language.
 
 " Run this plugin only once for the current buffer:
@@ -23,7 +23,8 @@ let g:tagbar_type_asciidoc = {
     \ 's:Table of Contents',
     \ 'i:Included Files',
     \ 'I:Images',
-    \ 'v:Videos'
+    \ 'v:Videos',
+    \ 'a:Set Attributes'
   \ ]
 \}
 

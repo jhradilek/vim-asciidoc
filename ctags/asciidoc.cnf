@@ -11,3 +11,5 @@
 --regex-asciidoc=/^video::([^\[]+)/\1/v,video,video/
 --regex-asciidoc=/^image::?([^\[]+)/\1/I,image,image/
 --regex-asciidoc=/^([ \t]|[^\/]{2}.*)\bimage:([^\[]+)/\2/I,image,image/
+--regex-asciidoc=/^:([^!:]+):/\1/a,set,set attribute/
+--regex-asciidoc=/^ifn?def::[^\[]+\[:([^!:]+):/\1/a,set,set attribute/
