@@ -2,7 +2,7 @@
 " Language:    AsciiDoc
 " Maintainer:  Jaromir Hradilek <jhradilek@gmail.com>
 " URL:         https://github.com/jhradilek/vim-asciidoc
-" Last Change: 9 August 2020
+" Last Change: 12 May 2022
 " Description: A filetype plugin file for the AsciiDoc markup language.
 
 " Run this plugin only once for the current buffer:
@@ -15,9 +15,8 @@ let s:save_cpo = &cpo
 set cpo&vim
 
 " Add support for the Tagbar plug-in:
-let g:tagbar_type_asciidoc = {
-  \ 'ctagstype': 'asciidoc',
-  \ 'deffile': expand('<sfile>:p:h:h') . '/ctags/asciidoc.cnf',
+let g:tagbar_type_asciidoctor = {
+  \ 'ctagstype': 'AsciiDoctor',
   \ 'sort': 0,
   \ 'kinds': [
     \ 's:Table of Contents',

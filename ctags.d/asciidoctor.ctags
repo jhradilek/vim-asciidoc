@@ -1,0 +1,20 @@
+--langdef=AsciiDoctor
+--langmap=AsciiDoctor:.asc.adoc.asciidoc
+--regex-AsciiDoctor=/^= +(.*)/\1/s,title,document title/
+--regex-AsciiDoctor=/^={2} +(.*)/· \1/s,section,level 1 section/
+--regex-AsciiDoctor=/^={3} +(.*)/· · \1/s,section,level 2 section/
+--regex-AsciiDoctor=/^={4} +(.*)/· · · \1/s,section,level 3 section/
+--regex-AsciiDoctor=/^={5} +(.*)/· · · · \1/s,section,level 4 section/
+--regex-AsciiDoctor=/^={6} +(.*)/· · · · · \1/s,section,level 5 section/
+--regex-AsciiDoctor=/^include::([^\[]+)/\1/i,include,included file/
+--regex-AsciiDoctor=/^video::([^\[]+)/\1/v,video,video/
+--regex-AsciiDoctor=/^image::?([^\[]+)/\1/I,image,image/
+--regex-AsciiDoctor=/^([ \t]|[^\/]{2}.*)\bimage:([^\[]+)/\2/I,image,image/
+--regex-AsciiDoctor=/^:([^!:]+):/\1/a,set,set attribute/
+--regex-AsciiDoctor=/^ifn?def::[^\[]+\[:([^!:]+):/\1/a,set,set attribute/
+--regex-AsciiDoctor=/\{set:([^!:]+):[^\}:!]+\}/\1/a,set,set attribute/
+--regex-AsciiDoctor=/^:!([^!:]+):/\1/A,unset,unset attribute/
+--regex-AsciiDoctor=/^ifn?def::[^\[]+\[:!([^!:]+):/\1/A,unset,unset attribute/
+--regex-AsciiDoctor=/^:([^!:]+)!:/\1/A,unset,unset attribute/
+--regex-AsciiDoctor=/^ifn?def::[^\[]+\[:([^!:]+)!:/\1/A,unset,unset attribute/
+--regex-AsciiDoctor=/\{set:([^!:]+)!\}/\3/A,unset,unset attribute/
