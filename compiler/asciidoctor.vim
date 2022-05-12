@@ -23,10 +23,12 @@ CompilerSet makeprg=asciidoctor\ -v\ --safe\ %
 
 " Parse error messages:
 CompilerSet errorformat=
-  \%.%#:\ ERROR:\ %f:\ line\ %l:\ %m,
-  \%.%#:\ WARNING:\ %f:\ line\ %l:\ %m,
-  \%.%#:\ WARNING:\ %m,
-  \%.%#:\ INFO:\ %m
+  \%.%#:\ %tRROR:\ %f:\ line\ %l:\ %m,
+  \%.%#:\ %tARNING:\ %f:\ line\ %l:\ %m,
+  \%.%#:\ %tARNING:\ %m,
+  \%.%#:\ %tNFO:\ %m,
+  \%E%.%#:\ FAILED:\ %m,
+  \%-Z%.%#
 
 " Save the compatibility options to avoid problems in compatible mode:
 let s:save_cpo = &cpo
