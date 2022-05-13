@@ -29,7 +29,7 @@ let &l:makeprg = 'vale --no-wrap --output ' . expand('<sfile>:p:h:h') . '/templa
 CompilerSet errorformat=
   \%f:%l:%c:%trror:\ %m,
   \%f:%l:%c:%tarning:\ %m,
-  \%f:%l:%c:suggestion:\ %m
+  \%f:%l:%c:%tote:\ %m
 
 " Restore the compatibility options:
 let &cpo = s:save_cpo

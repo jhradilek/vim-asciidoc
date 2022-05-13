@@ -1,6 +1,10 @@
 {{range .Files}}
 {{- $path := .Path -}}
 {{- range .Alerts -}}
-{{$path}}:{{.Line}}:{{index .Span 0}}:{{.Severity}}: {{.Message}} ({{.Check}})
+{{- $severity := .Severity -}}
+{{- if eq .Severity "suggestion" -}}
+    {{- $severity = "note" -}}
+{{end -}}
+{{$path}}:{{.Line}}:{{index .Span 0}}:{{$severity}}: {{.Message}} ({{.Check}})
 {{end -}}
 {{end -}}
