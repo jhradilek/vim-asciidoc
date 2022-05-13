@@ -18,6 +18,10 @@ if exists(":CompilerSet") != 2
   command -nargs=* CompilerSet setlocal <args>
 endif
 
+" Save the compatibility options to avoid problems in compatible mode:
+let s:save_cpo = &cpo
+set cpo&vim
+
 " Use asciidoctor to build the file and produce errors:
 CompilerSet makeprg=asciidoctor\ -v\ --safe\ %
 
@@ -29,10 +33,6 @@ CompilerSet errorformat=
   \%.%#:\ %tNFO:\ %m,
   \%E%.%#:\ FAILED:\ %m,
   \%-Z%.%#
-
-" Save the compatibility options to avoid problems in compatible mode:
-let s:save_cpo = &cpo
-set cpo&vim
 
 " Restore the compatibility options:
 let &cpo = s:save_cpo
