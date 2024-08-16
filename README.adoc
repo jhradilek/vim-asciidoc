@@ -2,7 +2,7 @@
 
 == Description
 
-The *vim-asciidoc* plug-in adds additional support for AsciiDoc to Vim. It adds AsciiDoc support to the link:Tagbar[https://github.com/preservim/tagbar] plug-in, allowing you to see the table of contents, included images and files, as well as defined and undefined attributes in the side bar while editing your AsciiDoc files.
+The *vim-asciidoc* plug-in adds additional support for AsciiDoc to Vim. It adds AsciiDoc support to the link:https://github.com/preservim/tagbar[Tagbar] plug-in, allowing you to see the table of contents, included images and files, as well as defined and undefined attributes in the side bar while editing your AsciiDoc files.
 
 == Copyright
 
