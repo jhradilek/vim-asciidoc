@@ -2,7 +2,7 @@
 " Language:    AsciiDoc
 " Maintainer:  Jaromir Hradilek <jhradilek@gmail.com>
 " URL:         https://github.com/jhradilek/vim-asciidoc
-" Last Change: 13 May 2022
+" Last Change: 26 February 2026
 " Description: A compiler plugin for AsciiDoctor.
 
 " Do not override run-time compiler settings:
@@ -23,7 +23,11 @@ let s:save_cpo = &cpo
 set cpo&vim
 
 " Use a custom vale output format to produce the messages:
-let &l:makeprg = 'vale --no-wrap --output ' . expand('<sfile>:p:h:h') . '/templates/vale.tmpl %'
+if exists('g:vale_config')
+  let &l:makeprg = 'vale --no-wrap --config ' . g:vale_config . ' --output ' . expand('<sfile>:p:h:h') . '/templates/vale.tmpl %'
+else
+  let &l:makeprg = 'vale --no-wrap --output ' . expand('<sfile>:p:h:h') . '/templates/vale.tmpl %'
+endif
 
 " Parse the messages:
 CompilerSet errorformat=
